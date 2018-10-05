@@ -1,0 +1,34 @@
+# Site settings
+title: Collectiive
+email:
+url: collectiive.com
+description: "Open source software is eating the world. </br> What is eating it from the inside?"
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-dark: '#000000'
+  links: '#219ab3'
+
+# Footer settings
+footer: Collectiive
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/collectiively
+  - title: github
+    url: https://github.com/collectiive
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .idea
