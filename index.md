@@ -1,1 +1,0 @@
-Long Live The Collectiive!
