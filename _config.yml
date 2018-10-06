@@ -18,6 +18,8 @@ social:
     url: https://twitter.com/collectiively
   - title: github
     url: https://github.com/collectiive
+  - title: medium
+    url: https://medium.com/collectiive
 
 # Build settings
 markdown: kramdown
