@@ -33,7 +33,6 @@ author:
 
 # Build Settings
 markdown: kramdown
-theme: jekyll-whiteglass
 plugins:
   - jekyll-feed
   - jekyll-archives
