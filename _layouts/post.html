@@ -10,7 +10,7 @@ layout: default
       {%   assign secondsSince = today | minus: start     %}
       {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60 %}
       {%   assign daysSince = hoursSince | divided_by: 24  %}
-      {%   assign random = secondsSince | divided_by: 97 %}
+      {%   assign random = secondsSince | divided_by: 971 %}
       <p class="post-meta">
           <a href="/">collectiive </a> {{ daysSince }} {%if daysSince <= 1 %}day {%else%}days{% endif %} ago • {{ random }} views •<span class="share-buttons">{% include crosspost.html %}</span>
       </p>
