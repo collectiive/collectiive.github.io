@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<div class="home">
+
+  {{ content }}
+
+  {% capture site_lang %}{{ site.lang | default: "en" }}{% endcapture %}
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      {% capture post_lang %}{{ post.lang | default: site_lang }}{% endcapture %}
+      {% capture lang %}{% if post_lang != site_lang %}{{ post_lang }}{% endif %}{% endcapture %}
+
+      <li{% if lang != empty %} lang="{{ lang }}"{% endif %}>
+        <header class="post-header">
+          <h1 class="post-title">
+              <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
+          </h1>
+
+        {%   assign today = site.time | date: '%s'      %}
+        {%   assign start = post.date | date: '%s'  %}
+        {%   assign secondsSince = today | minus: start     %}
+        {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60 %}
+        {%   assign daysSince = hoursSince | divided_by: 24  %}
+
+          <p class="post-meta">
+              <a href="/">collectiive</a> {{ daysSince }} {%if daysSince <= 1 %}day {%else%}days{% endif %} ago.
+          </p>
+        </header>
+
+        <div class="post-content">
+          {{ post.excerpt }}
+            <div class="post-link-continue">
+            <p> <a href="{{ post.url }}">read the full post at collectiive.com{{ post.url }} </a>
+            </p>
+            </div>
+
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% include pagination.html %}
+
+</div>

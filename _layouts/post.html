@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+      {%   assign today = site.time | date: '%s'      %}
+      {%   assign start = page.date | date: '%s'  %}
+      {%   assign secondsSince = today | minus: start     %}
+      {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60 %}
+      {%   assign daysSince = hoursSince | divided_by: 24  %}
+      {%   assign random = secondsSince | divided_by: 97 %}
+      <p class="post-meta">
+          <a href="/">collectiive </a> {{ daysSince }} {%if daysSince <= 1 %}day {%else%}days{% endif %} ago • {{ random }} views •<span class="share-buttons">{% include crosspost.html %}</span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+  <span class="share-buttons" style="padding: 20px 0px 150px 10px;">{% include crosspost.html %}</span>
+
+  {% if page.comments %}
+    <div class="post-comments" itemprop="comment">
+      {% include disqus.html %}
+    </div>
+  {% endif %}
+
+</article>

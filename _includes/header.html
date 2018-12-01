@@ -1,0 +1,16 @@
+<header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+    <nav class="site-nav">
+    {% for network in site.social %}
+        <a href="{{ network.url }}" class="banner-social-buttons"><i class="fa fa-{{ network.title }} fa-fw" aria-hidden="true"></i></a>
+    {% endfor %}
+        <a href="{{ site.url }}/feed.xml" class="banner-social-buttons"><i class="fa fa-rss fa-fw" aria-hidden="true"></i></a>
+    </nav>
+
+  </div>
+
+</header>

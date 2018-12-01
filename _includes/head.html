@@ -1,0 +1,65 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% assign title = page.title | default: site.title | escape %}
+  {% assign canonical = page.url | replace:'index.html','' | absolute_url %}
+  {% assign description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | escape %}
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  {% if page.keywords %}
+    {% if page.keywords.first %}
+      {% assign keywords = page.keywords | join: ',' %}
+    {% else %}
+      {% assign keywords = page.keywords %}
+    {% endif %}
+    <meta name="keywords" content="{{ keywords }}">
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="/feed.xml">
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/assets/images/apple-icon-144x144.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:site"    content="@{{ site.author.twitter }}">
+    <meta name="twitter:creator" content="@{{ site.author.twitter }}">
+    <meta name="twitter:title"   content="{{ page.title }}">
+
+    {% if page.desc %}
+    <meta name="twitter:description" content="{{ page.desc }}">
+    {% else %}
+    <meta name="twitter:description" content="{{ site.description }}">
+    {% endif %}
+
+    {% if page.image %}
+    <meta name="twitter:card"  content="summary_large_image">
+    <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+    {% endif %}
+    <!-- End of Twitter Cards -->
+
+    <!-- Open Graph/ LinkedIn Cards-->
+    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+
+    {% if page.desc %}
+    <meta name="og:description" content="{{ page.desc }}">
+    {% else %}
+    <meta name="og:description" content="{{ site.description }}">
+    {% endif %}
+
+    {% if page.image %}
+    <meta property="og:image" content="{{ site.url }}{{ page.image }}"/>
+    {% endif %}
+    <!-- End of Open Graph/ LinkedIn Cards-->
+
+    {% seo %}
+
+    {% include fonts.html %}
+    {% include analytics.html %}
+</head>

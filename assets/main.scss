@@ -1,0 +1,213 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: Bitter, "Apple SD Gothic Neo", AppleGothic, NanumBarunGothic, "Malgun Gothic", Dotum, sans-serif;
+$monospace-font-family: Monaco, Menlo, Consolas, "Courier New", DotumChe, monospace;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2568ba;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// whiteglass also includes a mixin for defining media queries.
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+
+
+/*Import partials from the `whiteglass` theme.*/
+@import "whiteglass";
+
+/*Customisations*/
+.site-title, .site-title:visited {
+  color: black;
+  font-family: Palatino;
+  text-rendering: optimizeLegibility;
+  display: inline;
+  font-size:50px;
+  font-weight:bold;
+  display:block;
+  position:relative;
+  padding: 15px 0px 0px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+
+.post-title {
+  font-size: 30px;
+  font-family: Palatino;
+  color: black;
+  letter-spacing: -1px;
+  line-height: 1;
+  display: inline;
+}
+
+.post-header {
+  margin-bottom: 0px;
+}
+
+.post-content {
+  position: relative;
+  left: 10px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 18px;
+  line-height: 1.3;
+  word-wrap: break-word;
+  text-align:justify;
+}
+
+.post-content p {
+  position: relative;
+  font-family: 'Inconsolata', monospace;
+  font-size: 18px;
+  line-height: 1.3;
+  word-wrap: break-word;
+  text-align:justify;
+}
+
+.post-content blockquote {
+  left: 10px;
+}
+
+.post-meta {
+  top: 10px;
+  font-size: 14px;
+  color: #828282;
+  padding: 10px 0px 0px 0px;
+}
+
+pre {
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.post-list > li:not(:first-child) {
+  border-top: 0px;
+  padding-top: 10px;
+}
+
+.post-link:hover {
+  color: black;
+}
+
+.post-content .post-link-continue p{
+  position: relative;
+  font-size: 16px;
+  font-family: Palatino;
+  font-style: italic;
+  padding: 10px 0px 0px 0px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: #111;
+  text-decoration: none;
+}
+
+.share-buttons {
+  padding: 0px 0px 0px 10px;
+}
+.share-buttons a {
+  color: black;
+  font-size: 18px;
+  padding: 0px 0px 0px 3px
+}
+
+.footer {
+  font-size: 12px;
+}
+
+.banner-social-buttons li {
+  float: right;
+}
+
+.site-nav .fa{
+  font-size: 18px;
+  padding: 25px 0px 0px 0px;
+}
+
+.post-comments {
+  font-family: 'Inconsolata', monospace;
+  padding: 30px 0px 0px 10px;
+  color: black;
+}
+
+blockquote {
+  color: #828282;
+  border-left: 0px;
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+
+blockquote:before {
+  font-family: Georgia, serif;
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -30px;
+  top: -20px;
+  color: #7a7a7a;
+}
+
+blockquote cite {
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+blockquote cite:before {
+  content: "\2014 \2009";
+}
+
+.footnotes p{
+  font-size: 14px;
+  line-height: 0.9;
+}
+
+.footnotes li{
+  font-size: 14px;
+  line-height: 0.9;
+}

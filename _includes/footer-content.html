@@ -1,0 +1,6 @@
+<p class="footer">Copyleft &copy; {{ site.author.name }} {{ site.time | date: '%Y' }}.</p>
+<p class="footer">Layout is a blatant imitation of <a href="http://antirez.com">&ltantirez&gt</a>.</p>
+{% for network in site.social %}
+<a href="{{ network.url }}" class="banner-social-buttons"><i class="fa fa-{{ network.title }} fa-fw" aria-hidden="true"></i></a>
+{% endfor %}
+<a href="{{ site.url }}/feed.xml" class="banner-social-buttons"><i class="fa fa-rss fa-fw" aria-hidden="true"></i></a>
