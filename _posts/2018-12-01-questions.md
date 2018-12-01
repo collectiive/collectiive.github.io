@@ -5,12 +5,15 @@ date: "2018-11-20 11:11"
 comments: true
 permalink: /essays/1
 redirect_from: /questions
-excerpt: "Open source software is eating the world. What is eating it from the inside?"
+excerpt: "Collectiive is a collaborative public effort to search for answers to questions vital to the sustainability of open source. Questions on how to make this altruistic model of innovation sustain for the next ten, thirty, hundred years."
 ---
-### Collectiive?
+> Open source software is eating the world. What is eating it from the inside?
+
+
+
 The open source movement is at an inflection point. The number, popularity, and usage of open source software is at an historic high; but the fundamental sustainability of the movement is shaky at best, non-existent at worst.
 
-**Collectiive** is a collaborative public effort to search for answers to questions vital to the sustainability of open source. Questions on how to make this altruistic model of innovation sustain for the next ten, thirty, hundred years. Reach out and help us ask the right questions!
+**Collectiive** is a collaborative public effort to search for answers to questions vital to the sustainability of open source: questions on how to make this altruistic model of innovation sustain for the next ten, thirty, hundred years. Reach out and help us ask the right questions!
 
 ### Questions
 - **Can we make the open-source movement self-sustaining?**
