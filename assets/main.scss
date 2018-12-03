@@ -131,16 +131,20 @@ pre {
 }
 
 a {
-  color: black;
+  color: gray;
   text-decoration: none;
 }
 
 a:visited {
-  color: black;
+  color: gray;
 }
 
 a:hover {
-  color: #111;
+  color: gray;
+  text-decoration: underline;
+}
+
+.site-header a:hover {
   text-decoration: none;
 }
 
