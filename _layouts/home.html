@@ -30,12 +30,10 @@ layout: default
         </header>
 
         <div class="post-content">
-          {{ post.excerpt }}
+            {{ post.content | split:'<!--break-->' | first }}
             <div class="post-link-continue">
-            <p> <a href="{{ post.url }}">read the full post at collectiive.com{{ post.url }} </a>
-            </p>
+                <p> <a href="{{ post.url }}">read the full post at collectiive.com{{ post.url }} </a></p>
             </div>
-
         </div>
       </li>
     {% endfor %}

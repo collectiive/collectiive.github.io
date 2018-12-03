@@ -12,7 +12,7 @@ Open source is considered an exemplar of the 'private-collective' model of innov
 This model was an attempt to rationalise and reason about the existence of the open source software industry, and answer the question: "why would thousands of top-notch programmers contribute, without apparent material incentives, to the provision of a public good?".[^2]
 
 This essay revisits the assumptions of the private-collective model, in the cloud-compute era, to understand the surgent phenomena of the open core revenue model in the commercial open source software industry. This is of particular significance in view of the perceived siege of the open source model by cloud vendors.[^3]
-
+<!--break-->
 ### Private-Collective Model
 A public good produced under the private-collective model has two classes of users: innovators and free-riders. Innovators are users of the the good, and active contributors to its sustained development. Free-riders are passive consumers of the good, with no contribution to the advancement of the good.
 
